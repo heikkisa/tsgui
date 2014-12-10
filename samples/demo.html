@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, 
+            initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi, user-scalable=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        <title>Demos</title>
+        
+        <link rel="stylesheet" href="css/base.css" />
+        
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+        
+        <script src="tsgui.js"></script>
+        <script src="demo.js"></script> 
+    </head>
+
+    <body onresize="resizeCanvas()" onload="initApp()">
+        <canvas id="rootCanvas" width="1" height="1" style="background-color:#FFFFFF">
+            <p>HTML canvas seems not to be supported by your browser.</p>
+            
+            <div id="intro" style="font-size:1em; line-height:140%">
+                <div style="font-size:2em; margin-bottom:1em;">
+                    Introduction
+                </div>
+                <div>
+                This page contains demos, examples and test cases. They are only designed for desktop browsers and are not 
+                meant to be very pretty, their main purpose is to test and showcase different ways to do things. 
+                Use the sidebar on the left to navigate between examples. If you want you can also 
+                visit the <a href="home.html">desktop test home page of the project.</a> It is a more serious attempt 
+                at creating a "normal" web page.
+                </div>
+                
+                <div style="margin-top:1em">
+                If you are using Firefox it can occasionally have a pretty erratic canvas performance. It is typically the slowest of all modern
+                desktop browsers, sometimes nearly <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=527386">300 times slower</a>
+                than Chrome.
+                </div>
+            </div>
+            
+            <div id="testi" style="font-size:15px; font-family: sans-serif; line-height:140%">
+                <div id="1" style="text-decoration:underline;">
+                    Underlined text and some other stuff, too.
+                </div>
+                <div id="2" style="font-size:20px; font-style:italic; margin:20px">
+                    20px italic text, fill some more content here.
+                </div>
+                <div id="3" style="color:#FF0000; font-weight:bold">
+                    Red bold text. <span id="4" style="color:#00FF00">This is a span!</span>
+                </div>
+                <div style="margin-left:20px;">
+                    Some text with margins added. Nothing special in that.
+                    <div style="margin-left:20px">
+                        More margins!
+                    </div>
+                </div>
+                <div  id="5">
+                    Normal text. However, <a href="https://www.google.com">this text is a link and you can click this to navigate away.</a>
+                </div>
+                <div id="6" style="font-size:25px; font-weight:bold">
+                    Large text.
+                </div>
+                <div id="7" style="text-decoration:overline; margin-top:20px; margin-bottom:20px">
+                    Overlined text with top and bottom-margins. 
+                </div>
+                <!--
+                <div>
+                    <a href="#" onclick="alert('Click')">Also this can be clicked</a>
+                </div>
+                -->
+                <div id="8" style="text-decoration:line-through">
+                    Striked out text.
+                </div>
+                <div id="9" style="background-color:#00FF00; text-decoration:underline">
+                    Green background and underline.
+                </div>
+            </div>
+        </canvas> 
+    </body>
+    
+</html>

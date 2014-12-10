@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, 
+            initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi, user-scalable=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        <title>tsgui.ts</title>
+        
+        <link rel="stylesheet" href="css/base.css" />
+        
+        <style>
+            html, body {
+                line-height: 130%;
+            }
+            
+            .reftitle {
+                font-size: 1.5em;
+                margin-bottom: 1em;
+            }
+            
+            .quote {
+                font-style: italic;
+            }
+            
+            .small {
+                font-size: 0.7em;
+                font-style: italic;
+            }
+        </style>
+        
+        <script src="tsgui.js"></script>
+        <script src="home.js"></script> 
+    </head>
+
+    <body onresize="resizeCanvas()" onload="initApp()">
+        <canvas id="rootCanvas" width="1" height="1" style="background-color:#eeeeee">
+            <p>HTML canvas seems not to be supported by your browser. This is fallback content.</p>
+            
+            <div id="title" style="font-size:2em;">
+                tsgui 0.1
+                <div style="font-size:0.7em;margin-top:1em">
+                    A canvas based TypeScript UI framework for mobile and desktop.
+                </div>
+                <div style="font-size:0.4em;margin-top:1em">
+                    <div>This is how HTML and CSS should be replaced.</div><div>See the <a href="demo.html">desktop demos</a></div>
+                </div>
+            </div>
+            
+            <div id="intro">
+                Have you ever created modern web applications and hoped that HTML and CSS would be little
+                more flexible? Well, I havent. I have lost hope a long time ago and accepted the truth that 
+                they are completely unsuitable for creating complex UI's and really can't be improved that much
+                without fundamental changes. We have been reduced to creating applications using what is
+                essentially a text markup language. I am not the only one who thinks this way, you can read some insights 
+                about these technologies below.
+            </div>
+            
+            <!-- Comments -->
+            <div id="critic1">
+                <div class="reftitle">Angular.js</div>
+                <div class="quote">
+                    "HTML is great for declaring static documents, but it falters when we try to use it for 
+                    declaring dynamic views in web-applications."
+                </div>
+            </div>
+            
+            <div id="critic2">
+                <div class="reftitle">Angular.js</div>
+                <div class="quote">
+                    "... Neither of these address the root problem that HTML was not designed for dynamic views."
+                </div>
+            </div>
+            
+            <div id="critic3">
+                <div class="reftitle">Zed A. Shaw</div>
+                <div class="quote">
+                    "The W3C Vaudeville Act. Most of their tech fails. The rest barely works. 
+                    HTML? Die! Die! Die! CSS? Arrgghhh!"</div>
+            </div>
+            
+            <div id="critic4">
+                <div class="reftitle">Unknown</div>
+                <div class="quote">"What a fucking nightmare."</div>
+            </div>
+            
+            <div id="explain">
+                Forget the HTML and CSS if you are doing complex applications instead of traditional web pages. There is no need to construct
+                new applications using archaic technologies that have evolved like the animals at the Chernobyl. As their original functions
+                and purpose were lost long time ago they are now a grotesque freak show, abused and dysfunctional, only useful to
+                serve as warning of man's folly.
+                
+                <p>
+                It's time to leave that stuff behind and use something that can be actually used to build UI's instead of hacking and
+                twisting HTML and CSS to fit your purposes. With Canvas and WebGL it is possible to build UI sytems
+                completely inside the browser. Forget cross-broser incompabilities, pixel-perfect UI's are here and they are here to stay!
+                </p>
+            </div>
+            
+            <!-- Info boxes -->
+            <div id="info1">
+                <div class="reftitle">Why?</div>
+                <div>
+                    Portability, reliability, consistency and performance. UI rendering and layout computation is same to everyone.
+                </div>
+            </div>
+            
+            <div id="info2">
+                <div class="reftitle">Alternatives</div>
+                <div>
+                    You are either with canvas and WebGL or against us. There are no alternatives.
+                </div>
+            </div>
+            
+            <div id="info3">
+                <div class="reftitle">Extensibility</div>
+                <div>
+                    How do you extend HTML and CSS? That's right, you don't. With a JS framework you can bend it 
+                    do anything you like and every browser will support it immediately.
+                </div>
+            </div>
+            
+            <div id="relax">
+                Feeling nervous abandoning you tried and true HTML? Don't surrender to you Stockholm syndrome just yet! Here are
+                some nice pictures to make you feel relaxed. Just press the button below and see the the nature in all its low
+                resolution glory. Sometimes I press that button just to see things happen. Just try it or you will never know
+                what you missed. The effect is even animated.
+            </div>
+            
+            <div id="userStories">
+                Not convinced yet? Then listen to some of our user stories and hear how happy and productive they are after
+                ditching the old gods and seeing the light.
+            </div>
+            
+            <!-- Customers -->
+            <div id="customer1">
+                <div class="reftitle">John Doe<span class="small">, Programmer</span></div>
+                <div class="quote">
+                    "One day it looked like I would have to create a mobile web application with HTML. 
+                    I thought about quitting my job first but then I saw this framework so I guess I don't have to."
+                </div>
+            </div>
+            
+            <div id="customer2">
+                <div class="reftitle">[Firstname] [Lastname]<span class="small">, [Job]</span></div>
+                <div class="quote">
+                    "I really enjoy using [Product] and hope that you will, too. I have nothing but positive
+                    experiences from it. It really enriches my life, all my friends want [Product] now, too! They
+                    are so jealous!"
+                </div>
+            </div>
+            
+            <div id="customer3">
+                <div class="reftitle">Mann Test<span class="small">, Consultant</span></div>
+                <div class="quote">
+                    "I don't really know much about this, but it apparently uses HTML5, enables access to social media 
+                    and leverages cloud services so it must be good. I heard it also supports push notifications."
+                </div>
+            </div>
+            
+            <div id="customer4">
+                <div class="reftitle">Mike Smith<span class="small">, Unemployed</span></div>
+                <div class="quote">
+                    "I will be paid for this, right? You said that. You all heard him say that didn't you?
+                    I need that damn money now! You can't do this to me! I'll find you!"
+                </div>
+            </div>
+               
+            <div id="end">
+                And that is not all! Remember to visit the <a href="demo.html">demo page</a> if you already haven't.
+                Also if you are interested check the two (<a href="#" onclick="showSource('home')">home.ts</a> 
+                and <a href="#" onclick="showSource('homeutils')">homeutils.ts</a>) 
+                TypeScript source files that are used to create this page.
+                There is still hope that in the future we don't have to build applications with tools that would 
+                make a punch card operator cringe.
+            </div>
+            
+        </canvas> 
+    </body>
+    
+</html>

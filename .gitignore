@@ -1,0 +1,6 @@
+*.js
+*.ts.txt
+*.log
+
+build/
+node_modules/
